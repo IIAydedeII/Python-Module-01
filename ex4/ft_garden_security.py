@@ -12,7 +12,7 @@ class Plant:
         print(f"Plant created: {self}")
 
     def __str__(self) -> str:
-        return f"{self.name}: {self._height}cm, {self._age} days old"
+        return f"{self.name}: {round(self._height, 1)}cm, {self._age} days old"
 
     def get_height(self) -> float:
         return self._height
