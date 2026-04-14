@@ -1,23 +1,27 @@
 class Plant:
     name = ""
     height = 0.0
-    _age = 0
+    current_age = 0
 
     def grow(self, growth: float) -> None:
         self.height += growth
 
     def age(self) -> None:
-        self._age += 1
+        self.current_age += 1
 
     def show(self) -> None:
-        print(f"{self.name}: {round(self.height, 1)}cm, {self._age} days old")
+        print(
+            f"{self.name}:",
+            f"{round(self.height, 1)}cm,",
+            f"{self.current_age} days old",
+        )
 
 
 def main() -> None:
     rose = Plant()
     rose.name = "Rose"
     rose.height = 25.0
-    rose._age = 30
+    rose.current_age = 30
 
     initial_height = rose.height
     print("=== Garden Plant Growth ===")
