@@ -14,8 +14,8 @@ class Plant:
     def grow(self, growth: float) -> None:
         self.height += growth
 
-    def age(self) -> None:
-        self.current_age += 1
+    def age(self, year: int) -> None:
+        self.current_age += year
 
     def show(self) -> None:
         print(self)
@@ -79,8 +79,8 @@ class Vegetable(Plant):
             f" Nutritional Value: {self.nutritional_value}"
         )
 
-    def age(self) -> None:
-        super().age()
+    def age(self, year: int) -> None:
+        super().age(year)
         self.nutritional_value += 1
 
 
@@ -106,9 +106,8 @@ def main() -> None:
     tomato = Vegetable("Tomato", 5.0, 10, "April")
     tomato.show()
     print("[make tomato grow and age for 20 days]")
-    for _ in range(20):
-        tomato.grow(2.1)
-        tomato.age()
+    tomato.grow(42)
+    tomato.age(20)
     tomato.show()
 
 

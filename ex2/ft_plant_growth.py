@@ -6,8 +6,8 @@ class Plant:
     def grow(self, growth: float) -> None:
         self.height += growth
 
-    def age(self) -> None:
-        self.current_age += 1
+    def age(self, year: int) -> None:
+        self.current_age += year
 
     def show(self) -> None:
         print(
@@ -29,7 +29,7 @@ def main() -> None:
     for day in range(7):
         print(f"=== Day {day + 1} ===")
         rose.grow(0.8)
-        rose.age()
+        rose.age(1)
         rose.show()
     total_growth = rose.height - initial_height
     print(f"Growth this week: {round(total_growth, 1)}cm")
