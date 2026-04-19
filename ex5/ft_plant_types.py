@@ -53,14 +53,15 @@ class Tree(Plant):
 
     def __str__(self) -> str:
         return (
-            f"{super().__str__()}\n" f" Trunk diameter: {self.trunk_diameter}"
+            f"{super().__str__()}\n"
+            f" Trunk diameter: {self.trunk_diameter}cm"
         )
 
     def produce_shade(self) -> None:
         print(
             f"Tree {self.name} now produces a shade of "
             f"{round(self.height, 1)}cm long and "
-            f"{self.trunk_diameter}cm wide"
+            f"{self.trunk_diameter}cm wide."
         )
 
 
@@ -75,8 +76,8 @@ class Vegetable(Plant):
     def __str__(self) -> str:
         return (
             f"{super().__str__()}\n"
-            f" Harvest Season: {self.harvest_season}\n"
-            f" Nutritional Value: {self.nutritional_value}"
+            f" Harvest season: {self.harvest_season}\n"
+            f" Nutritional value: {self.nutritional_value}"
         )
 
     def age(self, year: int) -> None:

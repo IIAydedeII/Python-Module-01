@@ -46,7 +46,7 @@ def main() -> None:
 
     plant = Plant("Rose", 15.0, 10)
     print("")
-    plant.set_height(25)
+    plant.set_height(25.0)
     plant.set_age(30)
     print("")
     plant.set_height(-5)
