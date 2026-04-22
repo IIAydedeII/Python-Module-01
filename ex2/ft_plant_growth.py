@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-
-
 class Plant:
     name = ""
     height = 0.0
