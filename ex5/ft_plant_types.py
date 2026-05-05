@@ -83,7 +83,7 @@ class Vegetable(Plant):
 
     def age(self, year: int) -> None:
         super().age(year)
-        self.nutritional_value += 1
+        self.nutritional_value += year
 
 
 def main() -> None:
