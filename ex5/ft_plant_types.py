@@ -15,8 +15,8 @@ class Plant:
     def grow(self, growth: float) -> None:
         self.height += growth
 
-    def age(self, year: int) -> None:
-        self.current_age += year
+    def age(self, day: int) -> None:
+        self.current_age += day
 
     def show(self) -> None:
         print(self)
@@ -81,9 +81,9 @@ class Vegetable(Plant):
             f" Nutritional value: {self.nutritional_value}"
         )
 
-    def age(self, year: int) -> None:
-        super().age(year)
-        self.nutritional_value += year
+    def age(self, day: int) -> None:
+        super().age(day)
+        self.nutritional_value += day
 
 
 def main() -> None:

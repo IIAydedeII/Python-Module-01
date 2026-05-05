@@ -7,8 +7,8 @@ class Plant:
     def grow(self, growth: float) -> None:
         self.height += growth
 
-    def age(self, year: int) -> None:
-        self.current_age += year
+    def age(self, day: int) -> None:
+        self.current_age += day
 
     def show(self) -> None:
         print(

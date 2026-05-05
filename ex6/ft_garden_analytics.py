@@ -23,8 +23,8 @@ class Plant:
         self.height += growth
         self.stats.grow += 1
 
-    def age(self, year: int) -> None:
-        self.current_age += year
+    def age(self, day: int) -> None:
+        self.current_age += day
         self.stats.age += 1
 
     def show(self) -> None:
