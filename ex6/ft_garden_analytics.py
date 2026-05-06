@@ -2,9 +2,23 @@
 class Plant:
     class _Stats:
         def __init__(self) -> None:
-            self.grow = 0
-            self.age = 0
-            self.show = 0
+            self._grow = 0
+            self._age = 0
+            self._show = 0
+
+        def increment_grow(self) -> None:
+            self._grow += 1
+
+        def increment_age(self) -> None:
+            self._age += 1
+
+        def increment_show(self) -> None:
+            self._show += 1
+
+        def display(self) -> None:
+            print(
+                f"Stats: {self._grow} grow, {self._age} age, {self._show} show"
+            )
 
     def __init__(self, name: str, height: float, age: int):
         self.name = name or "Unknown plant"
@@ -21,15 +35,15 @@ class Plant:
 
     def grow(self, growth: float) -> None:
         self.height += growth
-        self.stats.grow += 1
+        self.stats.increment_grow()
 
     def age(self, day: int) -> None:
         self.current_age += day
-        self.stats.age += 1
+        self.stats.increment_age()
 
     def show(self) -> None:
         print(self)
-        self.stats.show += 1
+        self.stats.increment_show()
 
     @classmethod
     def anonymous(cls) -> "Plant":
@@ -67,7 +81,14 @@ class Tree(Plant):
     class _Stats(Plant._Stats):
         def __init__(self) -> None:
             super().__init__()
-            self.produce_shade = 0
+            self._produce_shade = 0
+
+        def increment_produce_shade(self) -> None:
+            self._produce_shade += 1
+
+        def display(self) -> None:
+            super().display()
+            print(f" {self._produce_shade} shade")
 
     def __init__(
         self, name: str, height: float, age: int, trunk_diameter: float
@@ -88,7 +109,7 @@ class Tree(Plant):
             f"{round(self.height, 1)}cm long and "
             f"{self.trunk_diameter}cm wide."
         )
-        self.stats.produce_shade += 1
+        self.stats.increment_produce_shade()
 
 
 class Seed(Flower):
@@ -104,12 +125,8 @@ class Seed(Flower):
         self.seed_count = 42
 
 
-def display_stats(plant: Plant | Tree) -> None:
-    stats = plant.stats
-    print(f"Stats: {stats.grow} grow, {stats.age} age, {stats.show} show")
-    if isinstance(plant, Tree):
-        tree_stats = plant.stats
-        print(f" {tree_stats.produce_shade} shade")
+def display_stats(plant: Plant) -> None:
+    plant.stats.display()
 
 
 def main() -> None:
