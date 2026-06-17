@@ -95,14 +95,14 @@ def main() -> None:
     print("[asking the rose to bloom]")
     rose.bloom()
     rose.show()
-    print("")
+    print()
 
     print("=== Tree")
     oak = Tree("Oak", 200.0, 365, 5.0)
     oak.show()
     print("[asking the oak to produce shade]")
     oak.produce_shade()
-    print("")
+    print()
 
     print("=== Vegetable")
     tomato = Vegetable("Tomato", 5.0, 10, "April")

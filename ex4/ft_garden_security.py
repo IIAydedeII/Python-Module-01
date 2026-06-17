@@ -46,13 +46,13 @@ def main() -> None:
     print("=== Garden Security System ===")
 
     plant = Plant("Rose", 15.0, 10)
-    print("")
+    print()
     plant.set_height(25.0)
     plant.set_age(30)
-    print("")
+    print()
     plant.set_height(-5)
     plant.set_age(-10)
-    print("")
+    print()
     print(f"Current state: {plant}")
 
 

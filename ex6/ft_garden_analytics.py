@@ -135,7 +135,7 @@ def main() -> None:
     print("=== Check year-old")
     Plant.is_older_than_a_year(30)
     Plant.is_older_than_a_year(400)
-    print("")
+    print()
 
     print("=== Flower")
     rose = Flower("Rose", 15.0, 10, "red")
@@ -148,7 +148,7 @@ def main() -> None:
     rose.show()
     print("[statistics for Rose]")
     display_stats(rose)
-    print("")
+    print()
 
     print("=== Tree")
     oak = Tree("Oak", 200.0, 365, 5.0)
@@ -159,7 +159,7 @@ def main() -> None:
     oak.produce_shade()
     print("[statistics for Oak]")
     display_stats(oak)
-    print("")
+    print()
 
     print("=== Seed")
     sunflower = Seed("Sunflower", 80.0, 45, "yellow")
@@ -171,7 +171,7 @@ def main() -> None:
     sunflower.show()
     print("[statistics for Sunflower]")
     display_stats(sunflower)
-    print("")
+    print()
 
     print("=== Anonymous")
     unknown = Plant.anonymous()
